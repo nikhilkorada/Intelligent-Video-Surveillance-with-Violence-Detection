@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card" style="width: 700px;">
+    <h2>🔴 Live Surveillance Feed</h2>
+    <p>Processing Pose Estimations & Audio Signals...</p>
+    <img src="{{ url_for('video_feed') }}" style="width: 100%; border-radius: 8px; border: 2px solid #333;">
+    <p style="color: #888; font-size: 0.9em; margin-top: 10px;">The system is looking for violent posture patterns (30-frame window).</p>
+</div>
+{% endblock %}

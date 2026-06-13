@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card">
+    <h2>🔊 Standalone Audio Threat Detection</h2>
+    <p>Upload WAV/MP3 to detect screams or violent sounds.</p>
+    
+    <input type="file" id="audioFile" accept="audio/*">
+    <br><br>
+    <button onclick="uploadAudio()" class="btn">Analyze Sound</button>
+
+    <div id="result" class="result-box" style="display: none;">
+        <h3 id="verdict"></h3>
+        <p>Model Confidence: <span id="confidence"></span></p>
+    </div>
+</div>
+
+<script>
+    async function uploadAudio() {
+        const fileInput = document.getElementById('audioFile');
+        const resultDiv = document.getElementById('result');
+        if (!fileInput.files[0]) return alert("Please select a file!");
+
+        const formData = new FormData();
+        formData.append('file', fileInput.files[0]);
+        
+        resultDiv.style.display = 'none';
+
+        try {
+            const response = await fetch('/predict_audio', { method: 'POST', body: formData });
+            const data = await response.json();
+
+            resultDiv.style.display = 'block';
+            document.getElementById('verdict').innerText = data.verdict;
+            document.getElementById('confidence').innerText = data.confidence;
+            resultDiv.className = 'result-box ' + (data.is_violent ? 'danger' : 'success');
+        } catch (error) {
+            alert("Analysis failed. Check console.");
+        }
+    }
+</script>
+{% endblock %}

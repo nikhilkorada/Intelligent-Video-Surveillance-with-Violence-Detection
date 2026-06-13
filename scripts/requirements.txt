@@ -1,0 +1,11 @@
+tensorflow
+pandas
+opencv-python
+librosa
+scikit-learn
+tqdm
+datasets
+pyarrow
+torchcodec soundfile
+torch
+requests

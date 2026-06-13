@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Dataset folders
+data/
+content/
+
+# Generated files
+output/
+uploads/
+processed_audio/
+preprocessed_videos/
+extracted_features/
+
+# Model files
+*.h5
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Zip files
+*.zip
+
+# Temporary files
+temp/
+tmp/
+
+# Test cache
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Flask
+instance/
+.webassets-cache
+
+# TensorFlow checkpoints
+checkpoint
+*.index
+*.data-00000-of-00001
+
+# Feature files
+*.npz
+*.npy
+*.pkl
+*.pickle
+
+# Runtime outputs
+*.mp4
+*.wav
+*.avi

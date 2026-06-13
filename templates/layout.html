@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Violence Detection System</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; margin: 0; }
+        nav { background: #1f1f1f; padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        nav a { color: #bbb; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #3498db; }
+        .container { padding: 40px; text-align: center; }
+        .card { background: #1e1e1e; display: inline-block; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); min-width: 400px; }
+        .btn { background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .btn:hover { background: #2980b9; }
+        .result-box { margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: bold; }
+        .danger { background: rgba(231, 76, 60, 0.2); border: 1px solid #e74c3c; color: #e74c3c; }
+        .success { background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">HOME</a>
+        <a href="/live">LIVE MONITORING</a>
+        <a href="/upload">VIDEO UPLOAD</a>
+        <a href="/audio_detect">AUDIO ANALYSIS</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
